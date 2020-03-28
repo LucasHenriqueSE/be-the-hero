@@ -1,0 +1,52 @@
+================================================================
+Chocolatey - Gerenciador de Pacotes (Windows)
+
+cinst / choco install nodejs-lts (Instala o node na versão LTS)
+
+================================================================
+NodeJS
+
+Recursos (Rotas)
+
+Tipos de Parâmetros:
+
+Query Params: Parâmetros nomeados enviados na rota após "?" (Filtros, Paginação)
+Route Params: Parâmetros utilizados para identificar um recurso específico (Id de Usuário)
+Request Body: Corpo da requisição, utilizado para criar ou alterar recursos
+-----------------------------------------------------------------
+Banco de Dados
+
+Estratégias de adoção:
+
+Driver: SELECT * FROM users (Depende do banco de dados)
+Query Builder: table('users').select('*').where('') (Independente do banco de dados pois gera um código JavaScript que cria o SQL)
+
+
+Observações:
+
+O NodeJS não realiza o depoloy automaticamente, após cada alteração é necessário
+reiniciar o servidor para que alterações surtam efeito, salvo o uso de algum pacote (Ex.: Nodemon)
+
+Informações:
+
+package.json - Fornece informações das dependencias utilizadas entre outras informações
+package-lock.json - Possui informações de cache
+================================================================
+NPM - Gerenciador de Pacotes (NodeJS)
+
+npx create-react-app frontend (Executa um pacote externo, sem a necessidade de instalar o mesmo)
+npx knex init (Cria o arquivo knexfile.js que possui as configurações de acesso ao banco de dados)
+npx knex migrate:make create_ongs (Cria uma migration para facilitar a criação das tabelas)
+npx knex migrate:latest (Executa a migration para criar a tabela)
+
+npm init -y (Cria um novo projeto NodeJS já aceitando todas as condições previamente)
+npm install express (Micro-Framework)
+npm start (Executa script dentro do package.json para subir o servidor com o App do React)
+npm install nodemon -D (Instala o pacote nas dependencias de desenvolvimento para fazer o deploy da aplicação automaticamente)
+npm install knex (Instala o Query Builder)
+
+node index.js (Starta a aplicação na porta de rede configurada)
+
+================================================================
+================================================================
+================================================================
